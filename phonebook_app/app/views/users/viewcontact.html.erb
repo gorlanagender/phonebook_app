@@ -1,0 +1,23 @@
+<h1>Listing notes</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+	<td><% user.numbers.each do |number| %>
+	    <%= number.contact%>
+		
+		<% end %> </td>  
+  
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
